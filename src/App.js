@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import 'react-router-dom'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 
 //Components
 import Index from './components/public'
@@ -29,7 +29,7 @@ import Create from './components/admin/Settings/Role/Create/Create'
 function App() {
   return (
     <DataWebProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path='/' element={<Index />}>
             <Route path='' element={<Home />} />
@@ -60,7 +60,7 @@ function App() {
               }/>
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </DataWebProvider>
   )
 }
